@@ -56,12 +56,12 @@ SCRIPT
 $netopeer = <<SCRIPT
 rm -rf Netopeer2
 git clone -b devel-server https://github.com/CESNET/Netopeer2.git
-cd Netopeer2/keystored; mkdir build; cd build
+cd Netopeer2/cli; mkdir build; cd build
 cmake .. && make && make install
 cd ../../server; mkdir build; cd build
 cmake .. && make && make install
 cd ../../..
-chown -R vagrant:vagrant ./sysrepo/build/repository
+chown -R vagrant:vagrant ./sysrepo/build
 SCRIPT
 
 $liberoutergui = <<SCRIPT
@@ -106,8 +106,8 @@ SCRIPT
 #Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
 Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
-    vb.customize ["modifyvm", :id, "--cpus", "2"]
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.customize ["modifyvm", :id, "--cpus", "4"]
     vb.customize ["modifyvm", :id, "--hwvirtex", "on"]
     vb.customize ["modifyvm", :id, "--audio", "none"]
     vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
