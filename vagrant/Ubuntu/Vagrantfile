@@ -29,7 +29,7 @@ SCRIPT
 $libyang = <<SCRIPT
 rm -rf libyang
 git clone -b devel https://github.com/CESNET/libyang.git
-cd libyang; mkdir build; cd build
+cd libyang; git checkout -b ihung-build-ok 14700ec9f61b2770d30677d3db5ce2242de7beb4; mkdir build; cd build
 cmake -DGEN_LANGUAGE_BINDINGS=ON -DGEN_JAVA_BINDINGS=OFF .. && make && make install
 cd ../..
 ldconfig
@@ -38,7 +38,7 @@ SCRIPT
 $libnetconf2 = <<SCRIPT
 rm -rf libnetconf2
 git clone -b devel https://github.com/CESNET/libnetconf2.git
-cd libnetconf2; mkdir build; cd build
+cd libnetconf2; git checkout -b ihung-build-ok e7b6e1d8140d495b8203e00a02214a9478ea0e45; mkdir build; cd build
 cmake -DENABLE_PYTHON=ON .. && make && make install
 cd ../..
 ldconfig
@@ -47,7 +47,7 @@ SCRIPT
 $sysrepo = <<SCRIPT
 rm -rf sysrepo
 git clone -b devel https://github.com/sysrepo/sysrepo.git
-cd sysrepo; mkdir build; cd build
+cd sysrepo; git checkout -b ihung-build-ok a977ec653aaf68b366146b52e2747c5eceb68dbb; mkdir build; cd build
 cmake -DGEN_LANGUAGE_BINDINGS=OFF .. && make && make install
 cd ../..
 ldconfig
@@ -55,8 +55,9 @@ SCRIPT
 
 $netopeer = <<SCRIPT
 rm -rf Netopeer2
-git clone -b devel-server https://github.com/CESNET/Netopeer2.git
-cd Netopeer2/cli; mkdir build; cd build
+git clone -b devel https://github.com/CESNET/Netopeer2.git
+cd Netopeer2; git checkout -b ihung-build-ok 31a9b21963f27238c2f7e818b982faeeb15326b3
+cd cli; mkdir build; cd build
 cmake .. && make && make install
 cd ../../server; mkdir build; cd build
 cmake .. && make && make install
