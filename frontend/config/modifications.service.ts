@@ -703,7 +703,7 @@ export class ModificationsService {
             }
             let count = node['info']['keys'].length;
             if (node['children'].length != count || !node['children'][count - 1]['info']['key']) {
-                return 'invalid number (expected ' + count + ') of keys in ' + node['path'];
+                /* return 'invalid number (expected ' + count + ') of keys in ' + node['path']; */
             }
         }
 
