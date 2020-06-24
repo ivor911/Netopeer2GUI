@@ -742,7 +742,8 @@ export class ModificationsService {
                 node['path'] = node['path'] + '[' + node['info']['keys'][i] + '=\'' + node['children'][i]['value'] + '\']'
             }
         } else if (node['info']['type'] == 8 && top) {
-            node['path'] = node['path'].slice(0, node['path'].lastIndexOf('[') + 1) + '.=\'' + node['value'][0] + '\']'
+            /* node['path'] = node['path'].slice(0, node['path'].lastIndexOf('[') + 1) + '.=\'' + node['value'][0] + '\']' */
+            node['path'] = node['path'].slice(0, node['path'].lastIndexOf('[') + 1) + '.=\'' + node['value'] + '\']'
         }
         return null;
     }
