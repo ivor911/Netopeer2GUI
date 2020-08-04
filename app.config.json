@@ -1,11 +1,26 @@
 {
   "logo" : "assets/netopeer/logo.png",
-  "name" : "Netopeer",
-  "colorTheme" : {
-    "colorMain" : "#354b68",
-    "colorHighlight" : "#3d5676",
-    "colorSelected" : "#3d5676",
-    "colorSelected2" : "#6888b1"
+  "name" : "Ribbon Netopeer GUI",
+  "colorTheme": {
+    "colorMain": "linear-gradient(135deg, #000000, #FF007F, #5D3194)",
+    "colorHighlight": "linear-gradient(135deg, #141e30, #243b55)",
+    "colorSelected": "linear-gradient(135deg, #2c3e50, #4ca1af)",
+    "colorSelected2": "#00b55d",
+    "colorBackground": "linear-gradient(135deg, #000000, #FF007F, #5D3194)",
+    "colorBackground2": "linear-gradient(135deg, #FF007F, #5D3194)",
+    "colorBackgroundContent": "#F2F4F7",
+    "colorBackgroundSubnav": "#C10A7E",
+    "colorBackground4": "#FF0000",
+    "colorBackgroundNav": "#F2F4F7",
+    "colorTextNav": "#231f20",
+    "colorItemBackground": "rgba(255,255,255,0.9)",
+    "colorText": "#231f20",
+    "colorText2": "#FA007D",
+    "colorTextInverse": "#fff",
+    "colorTextInverse2": "#000",
+    "colorLink": "#0068a2",
+    "colorLinkHover": "#00a1e3",
+    "colorHeading": "rgba(0,0,0,0.5)"
   },
   "api" : {
     "url" : "/libapi",

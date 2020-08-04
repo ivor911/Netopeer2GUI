@@ -1,7 +1,7 @@
 @import '../netopeer-common';
 
 nav {
-	background-color: $colorMain;
+	background-color: $colorBackground2;
 	padding-left: 1em;
 	
 	a {
@@ -17,8 +17,8 @@ nav {
 		
 		&:hover,
 		&.active {
-			background-color: $colorBackground;
-			color: $colorText;
+			background-color: $colorBackgroundNav;
+			color: $colorTextNav;
 		}
 		&.active:hover {
 			cursor: default;
@@ -45,7 +45,7 @@ nav {
         td {
             background-color: $colorMain;
         }
-        color: $colorTextInverse;
+        color: $colorText2;
     }
     &.selected:hover {
         cursor: default;
@@ -53,7 +53,7 @@ nav {
 }
 
 .item_header {
-    color: $colorTextInverse;
+    color: $colorTextInverse2;
     th {
        background-color: $colorMain;
     }
